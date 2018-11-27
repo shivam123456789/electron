@@ -1,0 +1,52 @@
+<!-- <form [formGroup]="navbar"> -->
+<div class="col-sm-12 p-0">
+<div class="col-sm-12 colorPurple" *ngIf="hideNavBar">
+    <nav class="navbar navbar-expand-lg navbar-light colorPurple container pl-0 pr-0">
+      <div class="col-sm-1">
+      <a class="text-white f24" routerLink="/login">Logo</a>
+    </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav, #textEnd"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link"  (click)="userBtn()" >
+              <button type="button" routerLink="/user" routerLinkActive="activeclass" class="pLR34 {{user}} btn col-sm-12 ml-0 btn btn-outline-info colorWhite borderWhite">User</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  (click)="supplierBtn()" >
+              <button type="button" routerLink="/supplier" routerLinkActive="activeclass" class="pLR22 {{supplier}} col-sm-12 btn ml-0 btn-outline-info borderWhite colorWhite">Supplier</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  (click)="customerBtn()">
+              <button type="button" routerLink="/customer" routerLinkActive="activeclass" class="pLR14 btn {{customer}} col-sm-12 ml-0 btn-outline-info borderWhite colorWhite">Customer</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  (click)="stockItemBtn()">
+              <button type="button" routerLink="/stockItems" routerLinkActive="activeclass" class=" col-sm-12 {{stockItem}} btn ml-0 btn-outline-info  colorWhite borderWhite">Stock Item</button>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  (click)="reportsBtn()">
+              <button type="button" routerLink="/reports" routerLinkActive="activeclass" class="pLR22 btn {{reports}} col-sm-12 ml-0 btn btn-outline-info  colorWhite borderWhite">Reports</button>
+            </a>
+          </li>
+  
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse " id="textEnd">
+        <div class="col-sm-7 offset-sm-5 pl-0 pr-0">
+          <a class="text-white">Alfred TestUser</a>
+          <span class="pl-3"><i class="fa fa-user-circle colorWhite"></i></span>
+        </div>
+      </div>
+    </nav>
+  </div>
+<!-- </form> -->
+  <router-outlet></router-outlet>
+</div>

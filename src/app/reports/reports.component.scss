@@ -1,0 +1,36 @@
+.boxShadow {
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.18);
+    background-color: #ffffff;
+    color: var(--black);
+    border: solid 1px #f5f5f5;
+    }
+    .matRadioSize {
+        font-weight: 570 !important;
+        font-size: 14px !important;
+    }
+    .bgLwhite{
+        background-color: #dcdcdc !important
+    }
+    .pt6{
+    padding-top: 6px;
+    }
+    .iconBg{
+        height: 33px;
+        background-color: #49006a;
+        display: inline-block;
+    } 
+    .pLT10{
+        padding-left: 11px;
+        padding-top: 4px;
+    }
+
+    @media screen and (max-width:500px) {
+        .iconWidth{
+            width: 18px;  
+        }
+        .pLT10{
+            padding-left: 11px;
+            padding-top: 22px;
+        }
+    
+    }

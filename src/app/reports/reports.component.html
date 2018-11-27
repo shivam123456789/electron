@@ -1,0 +1,115 @@
+<form [formGroup]="reports">
+  <div class="col-sm-12">
+    <div class="col-sm-12 pt-5 mt-5">
+      <div class="col-sm-4 offset-sm-4 boxShadow">
+        <div class="col-sm-12 p-0">
+          <div class="row pt-4 pb-3 pr-2">
+            <div class="col-sm-6">
+
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker" id="fromDate" name="fromDate" formControlName="fromDate"
+                  placeholder="From date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <!-- <mat-error *ngIf="isFieldValid('publishDate')">
+                <span class="err_style">
+                  <span class="err_style" *ngIf="saleStep1.hasError('required',['publishDate'])" id="publishDate">Cannot be blank.</span>
+                </span>
+                <div class="col-sm-12 p-0 err_style errFont" id="publish">
+                  {{errorMessagePublish1}} {{errorMessagePublish}}
+                </div>
+              </mat-error> -->
+              </mat-form-field>
+
+            </div>
+            <div class="col-sm-6">
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="toDate" id="toDate" name="toDate" formControlName="toDate" placeholder="To date"
+                  class="f12">
+                <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+                <mat-datepicker #toDate></mat-datepicker>
+                <!-- <mat-error *ngIf="isFieldValid('publishDate')">
+                <span class="err_style">
+                  <span class="err_style" *ngIf="saleStep1.hasError('required',['publishDate'])" id="publishDate">Cannot be blank.</span>
+                </span>
+                <div class="col-sm-12 p-0 err_style errFont" id="publish">
+                  {{errorMessagePublish1}} {{errorMessagePublish}}
+                </div>
+              </mat-error> -->
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="col-sm-12 pb-4">
+                <mat-radio-group formControlName="stockReports" name="stockReports">
+                  <mat-radio-button type="radio" class="radio-inline" color="primary" id="stockReceipts" value="stock Receipts"><label
+                      class="matRadioSize m-0">Stock
+                      Receipts</label></mat-radio-button>
+                </mat-radio-group>
+                <mat-radio-group formControlName="stockReports" name="stockReports">
+                  <mat-radio-button type="radio" class="radio-inline" color="primary" id="stockIssues" value="Stock Issues">
+                    <label class="matRadioSize m-0">Stock
+                      Issues</label></mat-radio-button>
+                </mat-radio-group>
+                <mat-radio-group formControlName="stockReports" name="stockReports">
+                  <mat-radio-button type="radio" class="radio-inline" color="primary" id="stockReturns" value="Stock Returns"><label
+                      class="matRadioSize m-0">Stock
+                      Returns</label></mat-radio-button>
+                </mat-radio-group>
+                <mat-radio-group formControlName="stockReports" name="stockReports">
+                  <mat-radio-button type="radio" class="radio-inline" color="primary" id="salesmanStock" value="Salesman Stock"><label
+                      class="matRadioSize m-0">Salesman
+                      Stock</label></mat-radio-button>
+                </mat-radio-group>
+                <mat-radio-group formControlName="stockReports" name="stockReports">
+                  <mat-radio-button type="radio" class="radio-inline" color="primary" id="warehouseStock" value="Warehouse stock"><label
+                      class="matRadioSize m-0">Warehouse
+                      stock</label></mat-radio-button>
+                </mat-radio-group>
+
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="col-sm-12 form-group">
+                <select class="form-control bgLwhite" id="supplier" name="supplier" formControlName="supplier">
+                  <option value="supplier">Supplier</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div class="col-sm-12 form-group">
+                <select class="form-control bgLwhite" id="customer" name="customer" formControlName="customer">
+                  <option value="customer">Customer</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div class="col-sm-12 form-group">
+                <select class="form-control bgLwhite" name="salesman" formControlName="salesman">
+                  <option value="salesman">Salesman</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 offset-sm-4 pt-4 pb-4">
+          <div class="col-sm-12 row p-0">
+              <div class="col-sm-1 form-group f20 pL10 p-0"><img src="../assets/images/print.PNG" height="46px" width="46px"></div>
+              <div class="col-sm-1 form-group f20 pL10 pt6"><img src="../assets/images/search.PNG" height="40px" width="40px"></div>
+            </div>
+      </div>
+
+
+    </div>
+  </div>
+</form>
